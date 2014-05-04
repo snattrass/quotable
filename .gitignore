@@ -5,6 +5,9 @@
 *.war
 *.ear
 
+# Maven target
+target/
+
 # IntelliJ
 .idea/
 *.iml
