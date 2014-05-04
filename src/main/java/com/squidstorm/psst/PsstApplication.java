@@ -5,14 +5,14 @@ import org.springframework.boot.SpringApplication;
 
 
 /**
- * Squidstorm Solutions
- * <p/>
- * Create by Simon Nattrass on 04/05/2014 at 11:18
+ * The main entry point for PSST.
+ *
+ * @author Simon Nattrass
  */
 @EnableAutoConfiguration
 public class PsstApplication
 {
-    public static void main (String[] args)
+    public static void main (String[] args) throws Exception
     {
         SpringApplication.run(PsstApplication.class, args);
     }
