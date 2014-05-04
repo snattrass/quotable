@@ -6,7 +6,15 @@
 
     <groupId>com.squidstorm</groupId>
     <artifactId>psst</artifactId>
+    <name>PSST</name>
     <version>1.0.0-SNAPSHOT</version>
+    <description>PSST - The Secret Service</description>
+    <packaging>war</packaging>
+    <url>http://localhost:8080</url>
+    <organization>
+        <name>Squidstorm Solutions</name>
+        <url>www.squidstorm.com</url>
+    </organization>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
