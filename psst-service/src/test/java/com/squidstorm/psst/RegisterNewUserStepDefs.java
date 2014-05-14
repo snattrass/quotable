@@ -5,7 +5,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class RegisterUserStepDefs
+public class RegisterNewUserStepDefs
 {
     @Given("^I have a new user$")
     public void I_have_a_new_user() throws Throwable {
