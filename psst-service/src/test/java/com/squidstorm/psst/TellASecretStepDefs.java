@@ -6,18 +6,23 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.web.WebAppConfiguration;
 
 import java.util.List;
 
-import static org.mockito.Mockito.*;
 
-
+@WebAppConfiguration
+@ContextConfiguration(classes = PsstApplication.class)
 public class TellASecretStepDefs
 {
+    @Autowired
+    SecretRepository secretRepository;
+
     @Given("^the system knows about the following secrets:$")
     public void the_system_knows_about_the_following_secrets(List<Secret> secrets) throws Throwable {
-        SecretRepository repository = mock(SecretRepository.class);
-        when(repository.findAll()).thenReturn(secrets);
+        secretRepository.save(secrets);
     }
 
     @When("^the client requests GET /secrets$")
