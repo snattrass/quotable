@@ -1,11 +1,10 @@
 package com.squidstorm.psst.service;
 
 import com.squidstorm.psst.domain.Secret;
-import org.springframework.data.repository.Repository;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.List;
 
-
-public interface SecretRepository extends Repository<Secret, Long> {
-    List<Secret> findAll();
+@Repository
+public interface SecretRepository extends CrudRepository<Secret, Long> {
 }
