@@ -6,10 +6,11 @@
 
     <groupId>com.squidstorm</groupId>
     <artifactId>psst</artifactId>
-    <name>PSST</name>
     <version>1.0.0-SNAPSHOT</version>
-    <description>PSST - The Secret Service</description>
     <!--packaging>pom</packaging-->
+
+    <name>PSST</name>
+    <description>PSST - The Secret Service</description>
     <url>http://localhost:8080</url>
     <organization>
         <name>Squidstorm Solutions</name>
@@ -22,6 +23,12 @@
         <version>1.1.6.RELEASE</version>
     </parent>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <start-class>com.squidstorm.psst.PsstApplication</start-class>
+        <java.version>1.7</java.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -29,7 +36,13 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
@@ -51,18 +64,13 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Service Dependencies -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <!--scope>test</scope-->
         </dependency>
 
-        <!-- Client Dependencies -->
         <dependency>
             <groupId>org.thymeleaf</groupId>
             <artifactId>thymeleaf-spring4</artifactId>
