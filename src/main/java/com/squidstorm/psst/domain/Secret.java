@@ -18,6 +18,7 @@ public class Secret implements Serializable
     @Column(nullable = false)
     private String recipient;
 
+    @Lob
     @Column(nullable = false)
     private String secret;
 
