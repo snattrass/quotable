@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class PsstController
 {
-    @RequestMapping("secrets")
+    @RequestMapping("quotes")
     public String secrets() {
-        return "Here are all my secrets...";
+        return "Here is a list of all quotes";
     }
 }

@@ -1,6 +1,6 @@
 package com.squidstorm.psst.service;
 
-import com.squidstorm.psst.domain.Secret;
+import com.squidstorm.psst.domain.Quote;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,18 +9,18 @@ import javax.annotation.PostConstruct;
 @Service
 public class DatabaseLoader
 {
-    private final SecretRepository secretRepository;
+    private final QuoteRepository quoteRepository;
 
     @Autowired
-    public DatabaseLoader(SecretRepository secretRepository)
+    public DatabaseLoader(QuoteRepository quoteRepository)
     {
-        this.secretRepository = secretRepository;
+        this.quoteRepository = quoteRepository;
     }
 
     @PostConstruct
     void init()
     {
-        secretRepository.save(new Secret("Simon", "Alison",
+        quoteRepository.save(new Quote("Andy Kirkpatrick",
                 "One day you and everyone you know will be dust, and nothing you said or did, or bought or promised, " +
                 "or saved, or downloaded, or uploaded, or typed, or Tweeted will mean anything, and that day grows " +
                 "closer by the second.  Your future self, 40 years down the line, will hate you if you don’t have the " +
@@ -28,26 +28,7 @@ public class DatabaseLoader
                 "the night, and all those people who said not to go will be sorry they tried to stop you, and will " +
                 "wish they’d had the strength to go too."));
 
-        secretRepository.save(new Secret("Simon", "Alison",
+        quoteRepository.save(new Quote("Andre Gide",
                 "One doesn't discover new lands without consenting to lose sight, for a very long time, of the shore."));
-        secretRepository.save(new Secret("Simon", "Alison", "I ate all the chocolate"));
-        secretRepository.save(new Secret("Simon", "Alison", "I ate all the chocolate"));
-        secretRepository.save(new Secret("Simon", "Alison", "I ate all the chocolate"));
-        secretRepository.save(new Secret("Simon", "Alison", "I ate all the chocolate"));
-        secretRepository.save(new Secret("Simon", "Alison", "I ate all the chocolate"));
-        secretRepository.save(new Secret("Simon", "Alison", "I ate all the chocolate"));
-        secretRepository.save(new Secret("Simon", "Alison", "I ate all the chocolate"));
-        secretRepository.save(new Secret("Simon", "Alison", "I ate all the chocolate"));
-        secretRepository.save(new Secret("Simon", "Alison", "I ate all the chocolate"));
-        secretRepository.save(new Secret("Simon", "Alison", "I ate all the chocolate"));
-        secretRepository.save(new Secret("Simon", "Alison", "I ate all the chocolate"));
-        secretRepository.save(new Secret("Simon", "Alison", "I ate all the chocolate"));
-        secretRepository.save(new Secret("Simon", "Alison", "I ate all the chocolate"));
-        secretRepository.save(new Secret("Simon", "Alison", "I ate all the chocolate"));
-        secretRepository.save(new Secret("Simon", "Alison", "I ate all the chocolate"));
-        secretRepository.save(new Secret("Simon", "Alison", "I ate all the chocolate"));
-        secretRepository.save(new Secret("Simon", "Alison", "I ate all the chocolate"));
-        secretRepository.save(new Secret("Simon", "Alison", "I ate all the chocolate"));
-        secretRepository.save(new Secret("Simon", "Alison", "I ate all the chocolate"));
     }
 }

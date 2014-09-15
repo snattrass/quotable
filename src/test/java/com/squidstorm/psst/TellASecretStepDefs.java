@@ -1,7 +1,7 @@
 package com.squidstorm.psst;
 
-import com.squidstorm.psst.domain.Secret;
-import com.squidstorm.psst.service.SecretRepository;
+import com.squidstorm.psst.domain.Quote;
+import com.squidstorm.psst.service.QuoteRepository;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -18,11 +18,11 @@ import java.util.List;
 public class TellASecretStepDefs
 {
     @Autowired
-    SecretRepository secretRepository;
+    QuoteRepository quoteRepository;
 
     @Given("^the system knows about the following secrets:$")
-    public void the_system_knows_about_the_following_secrets(List<Secret> secrets) throws Throwable {
-        secretRepository.save(secrets);
+    public void the_system_knows_about_the_following_secrets(List<Quote> secrets) throws Throwable {
+        quoteRepository.save(secrets);
     }
 
     @When("^the client requests GET /secrets$")
