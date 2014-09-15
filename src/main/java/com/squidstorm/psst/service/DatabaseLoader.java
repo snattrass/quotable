@@ -64,7 +64,7 @@ public class DatabaseLoader
         quoteRepository.save(new Quote("Unknown",
                 "Think training's hard?  Try losing."));
 
-        quoteRepository.save(new Quote("Benajamin Mays",
+        quoteRepository.save(new Quote("Benjamin Mays",
                 "The tragedy of life doesn't lie in not reaching your goal.  The tragedy lies in having no goal to reach"));
 
         quoteRepository.save(new Quote("Mark Twain",
