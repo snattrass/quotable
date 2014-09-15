@@ -28,7 +28,7 @@ public class DatabaseLoader
                 "the night, and all those people who said not to go will be sorry they tried to stop you, and will " +
                 "wish they’d had the strength to go too."));
 
-        quoteRepository.save(new Quote("Andre Gide",
+        quoteRepository.save(new Quote("Andre Gidé",
                 "One doesn't discover new lands without consenting to lose sight, for a very long time, of the shore."));
     }
 }
