@@ -13,8 +13,9 @@ public class Quote implements Serializable
     @GeneratedValue
     private Long id;
 
-    @Column(nullable = false)
-    private String author;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="AUTHOR_ID")
+    private Author author;
 
     @Lob
     @Column(nullable = false)
@@ -23,13 +24,19 @@ public class Quote implements Serializable
     protected Quote() {
     }
 
-    public Quote(String author, String quote) {
+    public Quote(Author author, String quote) {
         super();
         this.author = author;
         this.quote = quote;
     }
 
-    public String getAuthor() {
+    public Quote(String authorName, String quote) {
+        super();
+        this.author = new Author(authorName);
+        this.quote = quote;
+    }
+
+    public Author getAuthor() {
         return author;
     }
 
