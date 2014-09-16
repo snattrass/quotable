@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/quotes")
-public class PsstController
+public class QuoteController
 {
     @Autowired
     private QuoteRepository quoteRepository;
