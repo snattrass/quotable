@@ -1,10 +1,14 @@
 package com.squidstorm.psst.domain;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
 @Table(name = "quotes")
+@JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class, property = "@id")
 public class Quote implements Serializable
 {
     private static final long serialVersionUID = 1L;
