@@ -40,8 +40,16 @@ public class Quote implements Serializable
         this.quote = quote;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public Author getAuthor() {
         return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
     }
 
     public String getQuote() {
