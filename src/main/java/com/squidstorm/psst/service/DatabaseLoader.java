@@ -31,19 +31,17 @@ public class DatabaseLoader
         save(new Quote("Andre Gidé",
                 "One doesn't discover new lands without consenting to lose sight, for a very long time, of the shore."));
 
-        save(new Quote("Unknown", "Dedication is what you do when no-one is watching."));
+        save(new Quote("Dedication is what you do when no-one is watching."));
 
         save(new Quote("George Eliot",
                 "It's never too late to be who you might have been."));
 
-        save(new Quote("Unknown",
-                "When they say you can't.  Then you have to."));
+        save(new Quote("When they say you can't.  Then you have to."));
 
         save(new Quote("Muhammad Ali",
                 "Don't quit.  Suffer now and life the rest of your life as a champion."));
 
-        save(new Quote("Unknown",
-                "Today I will do what others won't.  So tomorrow I can do what others can't"));
+        save(new Quote("Today I will do what others won't.  So tomorrow I can do what others can't"));
 
         save(new Quote("Bruce Lee",
                 "Do not pray for an easy life, pray for the stength to endure a difficult one."));
@@ -61,8 +59,7 @@ public class DatabaseLoader
         save(new Quote("Winston Churchill",
                 "Attitude is a little thing that makes a big difference."));
 
-        save(new Quote("Unknown",
-                "Think training's hard?  Try losing."));
+        save(new Quote("Think training's hard?  Try losing."));
 
         save(new Quote("Benjamin Mays",
                 "The tragedy of life doesn't lie in not reaching your goal.  The tragedy lies in having no goal to reach"));

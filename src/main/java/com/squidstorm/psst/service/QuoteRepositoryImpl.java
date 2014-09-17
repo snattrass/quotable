@@ -19,19 +19,20 @@ public class QuoteRepositoryImpl implements QuoteRepositoryCustom {
     @Autowired
     private AuthorRepository authorRepository;
 
-    @Transactional
     @Override
+    @Transactional
     public Quote saveQuote(Quote quote) {
-        String authorName = quote.getAuthor().getName();
-        Author author = authorRepository.findByName(authorName);
+        if (quote.getAuthor() != null) {
+            String authorName = quote.getAuthor().getName();
+            Author author = authorRepository.findByName(authorName);
 
-        if (author == null) {
-            em.persist(quote);
-            return quote;
+            if (author != null) {   // previously quoted
+                quote.setAuthor(author);
+                return em.merge(quote);
+            }
         }
-        else {
-            quote.setAuthor(author);
-            return em.merge(quote);
-        }
+
+        em.persist(quote);
+        return quote;
     }
 }

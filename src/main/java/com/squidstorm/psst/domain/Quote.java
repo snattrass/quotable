@@ -28,16 +28,18 @@ public class Quote implements Serializable
     protected Quote() {
     }
 
-    public Quote(Author author, String quote) {
+    public Quote(String quote) {
         super();
-        this.author = author;
         this.quote = quote;
     }
 
+    public Quote(Author author, String quote) {
+        this(quote);
+        this.author = author;
+    }
+
     public Quote(String authorName, String quote) {
-        super();
-        this.author = new Author(authorName);
-        this.quote = quote;
+        this(new Author(authorName), quote);
     }
 
     public Long getId() {
@@ -58,6 +60,7 @@ public class Quote implements Serializable
 
     @Override
     public String toString() {
-        return getAuthor() + " - \"" + getQuote() + "\"";
+        String authorName = (getAuthor() == null) ? "unknown" : getAuthor().getName();
+        return authorName + " - \"" + getQuote() + "\"";
     }
 }
