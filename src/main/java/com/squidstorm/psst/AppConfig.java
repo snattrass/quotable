@@ -2,6 +2,8 @@ package com.squidstorm.psst;
 
 import org.h2.server.web.WebServlet;
 import org.h2.tools.Server;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -23,6 +25,8 @@ import java.sql.SQLException;
 @EnableAutoConfiguration
 public class AppConfig
 {
+    Logger logger = LoggerFactory.getLogger(AppConfig.class);
+
     @Bean
     public WebMvcConfigurerAdapter mvcViewConfigurer()
     {
@@ -37,6 +41,7 @@ public class AppConfig
     @Bean
     public ServletRegistrationBean h2Console() throws SQLException
     {
+        logger.info("starting H2 Console" );
         ServletRegistrationBean reg = new ServletRegistrationBean(new WebServlet(), "/console/*");
         reg.setLoadOnStartup(1);
         return reg;
@@ -45,6 +50,7 @@ public class AppConfig
     @Bean
     public Server h2TcpServer() throws SQLException
     {
+        logger.info("starting H2 TCP Server");
         return Server.createTcpServer().start();
     }
 }
