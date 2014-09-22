@@ -2,6 +2,7 @@ package com.squidstorm.psst.controllers;
 
 import com.squidstorm.psst.domain.Quote;
 import com.squidstorm.psst.service.QuoteRepository;
+import com.squidstorm.psst.service.QuoteService;
 import org.apache.commons.collections4.IteratorUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,16 +17,15 @@ import java.util.List;
 public class QuoteController
 {
     @Autowired
-    private QuoteRepository quoteRepository;
+    private QuoteService quoteService;
 
     @RequestMapping("")
     public List<Quote> getAll() {
-        Iterable<Quote> quotes = quoteRepository.findAll();
-        return IteratorUtils.toList(quotes.iterator());
+        return quoteService.getAll();
     }
 
     @RequestMapping("/{id}")
     public Quote getOne(@PathVariable Long id) {
-        return quoteRepository.findOne(id);
+        return quoteService.getQuote(id);
     }
 }
