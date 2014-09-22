@@ -33,7 +33,9 @@ public class AppConfig
         return new WebMvcConfigurerAdapter() {
             @Override
             public void addViewControllers(ViewControllerRegistry registry) {
-                registry.addViewController("/client").setViewName("client");
+                // static content
+                // see http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html#mvc-config-view-controller
+                //registry.addViewController("/client").setViewName("client");
             }
         };
     }
