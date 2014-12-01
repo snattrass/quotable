@@ -23,8 +23,9 @@ public class QuoteRepositoryImpl implements QuoteRepositoryCustom {
     @Transactional
     public Quote saveQuote(Quote quote) {
         if (quote.getAuthor() != null) {
-            String authorName = quote.getAuthor().getName();
-            Author author = authorRepository.findByName(authorName);
+            String firstname = quote.getAuthor().getFirstname();
+            String surname = quote.getAuthor().getSurname();
+            Author author = authorRepository.findByFirstnameAndSurname(firstname, surname);
 
             if (author != null) {   // previously quoted
                 quote.setAuthor(author);

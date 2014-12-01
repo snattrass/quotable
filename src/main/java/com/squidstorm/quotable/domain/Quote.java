@@ -38,10 +38,6 @@ public class Quote implements Serializable
         this.author = author;
     }
 
-    public Quote(String authorName, String quote) {
-        this(new Author(authorName), quote);
-    }
-
     public Long getId() {
         return id;
     }
@@ -60,7 +56,9 @@ public class Quote implements Serializable
 
     @Override
     public String toString() {
-        String authorName = (getAuthor() == null) ? "unknown" : getAuthor().getName();
-        return authorName + " - \"" + getQuote() + "\"";
+        StringBuilder sb = new StringBuilder();
+        String authorName = (getAuthor() == null) ? "unknown" : getAuthor().getFullName();
+        sb.append(authorName).append(" - \"").append(getQuote()).append("\"");
+        return sb.toString();
     }
 }

@@ -14,25 +14,39 @@ public class Author implements Serializable
     @GeneratedValue
     private Long id;
 
-    @Column(nullable = false, unique = true)
-    private String name;
+    @Column(nullable = false)
+    private String firstname;
+
+    @Column(nullable = false)
+    private String surname;
 
     @OneToMany(mappedBy = "author")
     private List<Quote> quotes;
 
     protected Author() { }
 
-    public Author(String name) {
+    public Author(String firstname, String surname) {
         super();
-        this.name = name;
+        this.firstname = firstname;
+        this.surname = surname;
     }
 
     public Long getId() {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getFullName() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getFirstname()).append(" ").append(getSurname());
+        return sb.toString();
     }
 
     public List<Quote> getQuotes() {
@@ -41,6 +55,6 @@ public class Author implements Serializable
 
     @Override
     public String toString() {
-        return getName();
+        return getFullName();
     }
 }
