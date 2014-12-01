@@ -1,4 +1,4 @@
-package com.squidstorm.psst;
+package com.squidstorm.quotable;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;

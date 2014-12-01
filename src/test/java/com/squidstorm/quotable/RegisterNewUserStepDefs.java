@@ -1,4 +1,4 @@
-package com.squidstorm.psst;
+package com.squidstorm.quotable;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
@@ -13,7 +13,7 @@ public class RegisterNewUserStepDefs
         throw new PendingException();
     }
 
-    @When("^I browse to psst/register$")
+    @When("^I browse to quotable/register$")
     public void I_browse_to_psst_register() throws Throwable {
         // Express the Regexp above with the code you wish you had
         throw new PendingException();

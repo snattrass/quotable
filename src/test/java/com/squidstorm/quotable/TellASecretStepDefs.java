@@ -1,7 +1,7 @@
-package com.squidstorm.psst;
+package com.squidstorm.quotable;
 
-import com.squidstorm.psst.domain.Quote;
-import com.squidstorm.psst.service.QuoteRepository;
+import com.squidstorm.quotable.domain.Quote;
+import com.squidstorm.quotable.service.QuoteRepository;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -14,7 +14,7 @@ import java.util.List;
 
 
 @WebAppConfiguration
-@ContextConfiguration(classes = PsstApplication.class)
+@ContextConfiguration(classes = Quotable.class)
 public class TellASecretStepDefs
 {
     @Autowired

@@ -1,4 +1,4 @@
-package com.squidstorm.psst.domain;
+package com.squidstorm.quotable.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;

@@ -1,9 +1,7 @@
-package com.squidstorm.psst.controllers;
+package com.squidstorm.quotable.controllers;
 
-import com.squidstorm.psst.domain.Quote;
-import com.squidstorm.psst.service.QuoteRepository;
-import com.squidstorm.psst.service.QuoteService;
-import org.apache.commons.collections4.IteratorUtils;
+import com.squidstorm.quotable.domain.Quote;
+import com.squidstorm.quotable.service.QuoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

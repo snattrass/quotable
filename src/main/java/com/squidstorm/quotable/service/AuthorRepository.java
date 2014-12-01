@@ -1,6 +1,6 @@
-package com.squidstorm.psst.service;
+package com.squidstorm.quotable.service;
 
-import com.squidstorm.psst.domain.Author;
+import com.squidstorm.quotable.domain.Author;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

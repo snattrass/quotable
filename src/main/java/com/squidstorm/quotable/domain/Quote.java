@@ -1,4 +1,4 @@
-package com.squidstorm.psst.domain;
+package com.squidstorm.quotable.domain;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;

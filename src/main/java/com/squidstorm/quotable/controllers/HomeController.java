@@ -1,6 +1,6 @@
-package com.squidstorm.psst.controllers;
+package com.squidstorm.quotable.controllers;
 
-import com.squidstorm.psst.service.QuoteService;
+import com.squidstorm.quotable.service.QuoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

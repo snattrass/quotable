@@ -1,4 +1,4 @@
-package com.squidstorm.psst;
+package com.squidstorm.quotable;
 
 import org.h2.server.web.WebServlet;
 import org.h2.tools.Server;
@@ -16,7 +16,7 @@ import java.sql.SQLException;
 
 
 /**
- * Configuration for the Psst application
+ * Configuration for the application
  *
  * @author Simon Nattrass
  */

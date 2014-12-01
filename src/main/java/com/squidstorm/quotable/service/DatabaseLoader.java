@@ -1,6 +1,6 @@
-package com.squidstorm.psst.service;
+package com.squidstorm.quotable.service;
 
-import com.squidstorm.psst.domain.Quote;
+import com.squidstorm.quotable.domain.Quote;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
