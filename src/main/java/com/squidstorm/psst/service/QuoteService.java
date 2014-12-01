@@ -10,15 +10,19 @@ import java.util.List;
 @Service
 public class QuoteService
 {
+    private final QuoteRepository repository;
+
     @Autowired
-    private QuoteRepository quoteRepository;
+    public QuoteService(QuoteRepository repository) {
+        this.repository = repository;
+    }
 
     public List<Quote> getAll() {
-        Iterable<Quote> quotes = quoteRepository.findAll();
+        Iterable<Quote> quotes = repository.findAll();
         return IteratorUtils.toList(quotes.iterator());
     }
 
     public Quote getQuote(Long id) {
-        return quoteRepository.findOne(id);
+        return repository.findOne(id);
     }
 }
