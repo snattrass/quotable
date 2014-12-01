@@ -5,17 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.squidstorm</groupId>
-    <artifactId>psst</artifactId>
+    <artifactId>quotable</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <!--packaging>pom</packaging-->
 
-    <name>PSST</name>
-    <description>PSST - The Secret Service</description>
-    <url>http://localhost:8080</url>
-    <organization>
-        <name>Squidstorm Solutions</name>
-        <url>www.squidstorm.com</url>
-    </organization>
+    <name>Quotable</name>
+    <description>"A quote for every occasion"</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
